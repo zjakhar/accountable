@@ -1,4 +1,5 @@
 # README
+[![Codeship Status for zjakhar/accountable](https://app.codeship.com/projects/aab01060-2e52-0138-c007-6693da41f57b/status?branch=master)](https://app.codeship.com/projects/384823)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
