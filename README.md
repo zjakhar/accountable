@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+Ruby 2.6.5    
 
 * System dependencies
 
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Accountable: Financial Budgeting App
+
+By Zain Jakhar
