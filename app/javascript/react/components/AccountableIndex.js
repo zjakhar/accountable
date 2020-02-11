@@ -13,7 +13,7 @@ const AccountableIndex = (props) => {
                 <h2>Take Control of Your Future</h2>
               </header>
               <p>Give Every $ a Purpose</p><p>Eliminate Debt</p><p>Reduce Stress</p>
-              <Link to={"/users/sign_up"} className = "button">Join for Free</Link>
+              <a href="/users/sign_up" className="button">Join for Free</a>
             </div>
           </div>
         </div>
