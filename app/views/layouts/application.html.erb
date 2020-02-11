@@ -9,9 +9,16 @@
 <body>
 
   <nav class="top-bar">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE88-sYdEs3cHMCT85Irr1rukGPpfgFfsLVRaaROcSQ8_JU9K4" alt="logo">
+    </div>
     <h1><a href="/">Accountable</a></h1>
-
-    <section class="top-bar-section">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <div class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
@@ -23,7 +30,7 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
-    </section>
+    </div>
   </nav>
 
   <%- flash.each do |key, value| -%>
