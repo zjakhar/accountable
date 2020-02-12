@@ -1,4 +1,4 @@
-p {text-align: center;}
+// p {text-align: center;}
 .Grid {
   padding: 100px;
   display: flex;
@@ -34,4 +34,11 @@ p {text-align: center;}
       padding-top: 100%;
     }
   }
+}
+
+.month-text-last {
+  display: inline-block;
+  align: center;
+  padding-top: 45%;
+  // background: firebrick;
 }
