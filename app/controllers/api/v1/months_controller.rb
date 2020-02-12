@@ -7,7 +7,7 @@ class Api::V1::MonthsController < ApplicationController
   def create
     month = Month.new(month_params)
     if month.save
-      render json { month: month }
+      render json { month }
     else
       render json: { error: album.errors.full_messages }, status: :unprocessable_entity
     end
