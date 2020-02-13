@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MonthTile from './MonthTile'
+import MonthsForm from './MonthsForm'
 import { Link } from 'react-router-dom'
 
 const MonthsIndex = (props) => {
@@ -23,6 +24,34 @@ const MonthsIndex = (props) => {
       })
   }, [])
 
+  const submitNewMonth = (formPayload) => {
+    fetch('/api/v1/months.json', {
+      credentials: "same-origin",
+      method: 'POST',
+      body: JSON.stringify(formPayload),
+      headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+         error = new Error(errorMessage)
+        throw error
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      setMonths([
+        ...months,
+        body])
+    })
+    .catch(error => console.error(`Error in fetch ${error.message}`))
+  }
+
   const monthTiles = months.map((month) => {
     return (
       <MonthTile
@@ -34,16 +63,12 @@ const MonthsIndex = (props) => {
 
   return (
     <div className="test">
-      <span>
+      <div className="Grid">
         { monthTiles }
-      </span>
-      <span className="Grid">
-        <Link to={`/months/new`} className="Grid-item">
-          <div className="month-text-last">
-            + Add New Month +
-          </div>
-        </Link>
-      </span>
+      </div>
+      <MonthsForm
+        onSubmit = { submitNewMonth }
+      />
     </div>
   )
 }

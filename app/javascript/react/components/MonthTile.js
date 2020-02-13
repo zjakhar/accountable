@@ -4,9 +4,7 @@ const MonthTile = ({ monthData }) => {
   let { month } = monthData
 
   return (
-    <div className="Grid">
-      <div className="Grid-item">{ month }</div>
-    </div>
+    <div className="Grid-item">{ month }</div>
   )
 }
 

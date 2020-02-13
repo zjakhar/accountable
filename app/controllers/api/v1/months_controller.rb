@@ -1,13 +1,15 @@
 class Api::V1::MonthsController < ApplicationController
-  # before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, only: [:index, :create]
   def index
-    render json: Month.all
+    months = current_user.months
+    render json: months
   end
 
   def create
     month = Month.new(month_params)
-    if month.save
-      render json { month }
+    month.user = current_user
+    if month.save!
+      render json: month
     else
       render json: { error: album.errors.full_messages }, status: :unprocessable_entity
     end
