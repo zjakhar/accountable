@@ -1,5 +1,5 @@
 class Api::V1::MonthsController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, only: [:index, :create]
   def index
     months = current_user.months
     render json: months
