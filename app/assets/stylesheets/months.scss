@@ -1,12 +1,12 @@
 // p {text-align: center;}
 .Grid {
-  padding: 100px;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
 
   &-item {
     width: 100%;
-    background: firebrick;
+    background: #8CBD3D;
     margin-top: 2%;
     color: white;
     text-align: center;
@@ -40,5 +40,12 @@
   display: inline-block;
   align: center;
   padding-top: 45%;
-  // background: firebrick;
+}
+
+.month_form {
+  display: inline-block;
+  text-align: center;
+  height: 5%;
+  width: 40%;
+  border: 2px gold;
 }
