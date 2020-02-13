@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import AccountableIndex from './AccountableIndex'
-import MonthsIndex from './MonthsIndex'
+import MonthsIndexContainer from './MonthsIndexContainer'
 
 export const App = (props) => {
 return (
@@ -9,7 +9,7 @@ return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={AccountableIndex} />
-        <Route exact path="/months" component={MonthsIndex} />
+        <Route exact path="/months" component={MonthsIndexContainer} />
       </Switch>
     </BrowserRouter>
   </div>
