@@ -1,10 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MonthTile = ({ monthData }) => {
-  let { month } = monthData
+  let { id, month } = monthData
 
   return (
-    <div className="Grid-item">{ month }</div>
+    <div className="test">
+      <Link to={`/months/${id}`}>
+        <div className="Grid-item">{ month }</div>
+      </Link>
+    </div>
   )
 }
 
