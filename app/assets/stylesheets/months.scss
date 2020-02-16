@@ -5,7 +5,7 @@
   flex-wrap: wrap;
 
   &-item {
-    width: 100%;
+    width: 200px;
     background: #8CBD3D;
     margin-top: 2%;
     color: white;
@@ -18,6 +18,21 @@
         background: grey;
         margin-right: 2%;
       }
+
+  // &-item {
+  //   width: 100%;
+  //   background: #8CBD3D;
+  //   margin-top: 2%;
+  //   color: white;
+  //   text-align: center;
+  //
+  //
+  //   @media (min-width: 48rem) {
+  //     width: 49%;
+  //     &:nth-child(odd) {
+  //       background: grey;
+  //       margin-right: 2%;
+  //     }
     }
 
     @media (min-width: 62rem) {
@@ -48,4 +63,8 @@
   height: 5%;
   width: 40%;
   border: 2px gold;
+}
+
+.month-title {
+  text-align: left;
 }
