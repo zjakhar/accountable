@@ -134,7 +134,9 @@ const MonthShowContainer = (props) => {
       <MonthShow
         month = { month }
       />
+    <div className="left-box">
       {lineitemTile}
+    </div>
       <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
       <LineitemsForm
         onSubmit = { submitNewLineitem }
