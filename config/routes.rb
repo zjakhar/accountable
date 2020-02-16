@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :months, only: [:index, :show, :create] do
-        resources :lineitems, only: [:index, :show, :create]
+        resources :lineitems, only: [:index, :show, :create, :destroy]
       end
     end
   end
