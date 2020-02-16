@@ -6,6 +6,23 @@
 }
 
 .lineitem {
+  margin-left: 5%;
+  margin-right: 3%;
   list-style: none;
   display: inline-flex;
+  ;}
+
+.delete-button {
+  background: transparent;
+  height: 20px;
+  width: 80px;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.left-box {
+  text-align: left;
+  display: block;
 }
