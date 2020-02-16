@@ -1,7 +1,7 @@
 class Api::V1::MonthsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :show, :create]
   protect_from_forgery unless: -> { request.format.json? }
-  
+
   def index
     months = current_user.months
     render json: months
