@@ -2,6 +2,8 @@ require 'rails_helper'
 require 'spec_helper'
 
 describe User do
+  it { should have_many :months }
+  it { should have_many :lineitems }
 
   it { should have_valid(:first_name).when("Zain") }
   it { should_not have_valid(:first_name).when(nil, "") }
