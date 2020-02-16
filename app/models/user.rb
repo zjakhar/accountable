@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :months
+  has_many :lineitems
 
   validates :email, presence: true
   validates :encrypted_password, presence: true, length: { minimum: 6 }
