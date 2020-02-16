@@ -1,16 +1,5 @@
 class Api::V1::LineitemsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :show, :create]
-
-  # def index
-  #   binding.pry
-  #   render json: Lineitem.all
-  # end
-
-  # def show
-  #   # binding.pry
-  #   lineitem = Lineitem.find(params[:id])
-  #   render json: lineitem
-  # end
+  before_action :authenticate_user!, only: [:create]
 
   def create
     month = Month.find(params["month_id"])
@@ -26,8 +15,7 @@ class Api::V1::LineitemsController < ApplicationController
 
 private
 
-def lineitem_params
-  params.permit(:month_id, :user_id, :category, :lineitem, :value)
-end
-
+  def lineitem_params
+    params.permit(:month_id, :user_id, :category, :lineitem, :value)
+  end
 end
