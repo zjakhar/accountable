@@ -20,7 +20,8 @@ const Charts = (props) => {
         loader={<div>Loading Chart</div>}
         data={emptyArray}
         options={{
-          title: `${props.month.month} expenses, you have $${props.remainingToBudget(props.lineitems)} left to budget to reach a zero based budget!`
+          title: `${props.month.month} expenses, you have $${props.remainingToBudget(props.lineitems)} left to budget to reach a zero based budget!`,
+          is3D: true
         }}
         rootProps={{ 'data-testid': '1' }}
       />
