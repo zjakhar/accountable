@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get "/months", to: 'homes#index'
   get "/months/:id", to: 'homes#index'
+  get "/about", to: 'homes#index'
+  get "/contact", to: 'homes#index'
 
   namespace :api do
     namespace :v1 do
