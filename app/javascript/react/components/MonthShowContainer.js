@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import LineitemsForm from './LineitemsForm'
 import MonthShow from './MonthShow'
 import LineitemTile from './LineitemTile'
+import Charts from './Charts'
 
 const MonthShowContainer = (props) => {
   let monthId = props.match.params.id
@@ -130,12 +131,19 @@ const MonthShowContainer = (props) => {
   }
 
   return (
-    <div className="test">
+    <div className="row test">
       <MonthShow
         month = { month }
       />
-    <div className="left-box">
+    <div className="columns small-4 left-box">
       {lineitemTile}
+    </div>
+    <div className="columns small-4">
+      <Charts
+        lineitems = { lineitems }
+        month = { month }
+        remainingToBudget = { remainingToBudget }
+        />
     </div>
       <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
       <LineitemsForm
