@@ -10,6 +10,12 @@ const LineitemsForm = (props) => {
     value: 0
   })
 
+  const typeDropdown = ['income', 'expense']
+  const typeOptions = typeDropdown.map((type) => <option key={type} value={type}>{type}</option)
+
+  const lineitemsDropdown = ['Paycheck', 'Mortgage/Rent', 'Utilities', 'Insurance', 'Transportation/Gas', 'Groceries', 'Debt', 'Life Style', 'Savings', 'Giving', 'Other']
+  const lineitemOptions = lineitemsDropdown.map((lineitem) => <option key={lineitem} value={lineitem}>{lineitem}</option>)
+
   const handleChange = (event) => {
     setNewLineitem({
       ...newLineitem,
@@ -50,26 +56,30 @@ const LineitemsForm = (props) => {
       <form onSubmit={handleSubmit} className="trans-form">
         <ErrorsList errors={errors} />
         <label>
-          Type:
-          <input
+          Income or Expense?
+          <select
             name="category"
             id="category"
             type="text"
             value={newLineitem.category}
             onChange={handleChange}
-          />
+          >
+            <option></option>
+            {typeOptions}
+          </select>
         </label>
 
-        <h3>Line Item</h3>
-
-        <label>Line Item
-          <input
+        <label>Categories
+          <select
             name="lineitem"
             id="lineitem"
             type="text"
             value={newLineitem.lineitem}
             onChange={handleChange}
-          />
+          >
+            <option></option>
+            {lineitemOptions}
+          </select>
         </label>
 
         <label>Value
