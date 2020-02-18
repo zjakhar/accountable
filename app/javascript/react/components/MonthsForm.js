@@ -6,6 +6,8 @@ const MonthsForm = (props) => {
     month: ""
   })
 
+  const monthDropDown = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const monthOptions = monthDropDown.map((month) => <option key={month} value={month}>{month}</option>)
   const [errors, setErrors] = useState({})
 
   const handleChange = (event) => {
@@ -43,12 +45,15 @@ const MonthsForm = (props) => {
     <div className="month_form">
       <form onSubmit={ handleSubmit }>
         <label>Add a New Month to Budget
-          <input
+          <select
             type="text"
             name="month"
             onChange={handleChange}
             value={monthForm.month}
-            />
+          >
+            <option></option>
+            {monthOptions}
+          </select>
         </label>
 
         <input
