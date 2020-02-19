@@ -1,55 +1,43 @@
-// p {text-align: center;}
-.Grid {
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-
-  &-item {
-    width: 200px;
-    background: #8CBD3D;
-    margin-top: 2%;
-    color: white;
-    text-align: center;
-
-
-    @media (min-width: 48rem) {
-      width: 49%;
-      &:nth-child(odd) {
-        background: grey;
-        margin-right: 2%;
-      }
-
-  // &-item {
-  //   width: 100%;
-  //   background: #8CBD3D;
-  //   margin-top: 2%;
-  //   color: white;
-  //   text-align: center;
-  //
-  //
-  //   @media (min-width: 48rem) {
-  //     width: 49%;
-  //     &:nth-child(odd) {
-  //       background: grey;
-  //       margin-right: 2%;
-  //     }
-    }
-
-    @media (min-width: 62rem) {
-      width: 23.5%;
-      &:not(:nth-child(4n)) {
-        background: grey;
-        margin-right: 2%;
-      }
-    }
-
-    &:before {
-      content: "";
-      float: left;
-      padding-top: 100%;
-    }
-  }
-}
+// // p {text-align: center;}
+// .Grid {
+//   padding: 50px;
+//   // display: flex;
+//   flex-wrap: wrap;
+//
+//   &-item {
+//     width: 200px;
+//     height: 200px;
+//     background: #8CBD3D;
+//     margin: 2%;
+//     color: white;
+//     text-align: center;
+//     float: left;
+//
+//
+//
+//     @media (min-width: 48rem) {
+//       width: 23%;
+//       &:nth-child(odd) {
+//         background: grey;
+//         margin-right: 2%;
+//       }
+//
+//
+//     @media (min-width: 62rem) {
+//       width: 23%;
+//       &:not(:nth-child(4n)) {
+//         background: #8CBD3D;
+//         margin-right: 2%;
+//       }
+//     }
+//
+//     &:before {
+//       content: "";
+//       float: left;
+//       padding-top: 100%;
+//     }
+//   }
+// }
 
 .month-text-last {
   display: inline-block;
@@ -67,4 +55,39 @@
 
 .month-title {
   text-align: left;
+}
+
+.Grid {
+  // display: inline-flex;
+  // flex-wrap: wrap;
+
+  &-item {
+    width: 100%;
+    height:250px;
+    background: firebrick;
+    margin: 2%;
+    float: left;
+
+    @media (min-width: 43rem) {
+      width: 20.5%;
+      &:nth-child(even) {
+        background: grey;
+        margin-right: 2%;
+      }
+    }
+
+    @media (min-width: 43rem) {
+      width: 20.5%;
+      &:not(:nth-child(4n)) {
+        background: grey;
+        margin-right: 2%;
+      }
+    }
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+  }
 }
