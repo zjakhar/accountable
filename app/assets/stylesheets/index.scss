@@ -11,6 +11,10 @@ body, html {
 .test {
   margin-top: 100px;
 }
+
+.welcome {
+  color: white;
+}
 nav{
   position: fixed;
   top:0;
@@ -48,12 +52,12 @@ nav ul li{
   margin-top: 25px;
   line-height: none;
   font-size: 18px;
-  color: white;
+  color: #8CBD3D;
   padding: 5px 15px;
   text-decoration: none;
   text-transform: uppercase;
   transition: 1s;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 15px ;
 }
 
 nav.black ul li{

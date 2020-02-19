@@ -59,7 +59,7 @@
 
 .Grid {
   // display: inline-flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
 
   &-item {
     width: 100%;
@@ -68,10 +68,10 @@
     margin: 2%;
     float: left;
 
-    @media (min-width: 43rem) {
+    @media (min-width: 68rem) {
       width: 20.5%;
       &:nth-child(even) {
-        background: grey;
+        background-image: grey;
         margin-right: 2%;
       }
     }
@@ -79,7 +79,7 @@
     @media (min-width: 43rem) {
       width: 20.5%;
       &:not(:nth-child(4n)) {
-        background: grey;
+        background: #8CBD3D;
         margin-right: 2%;
       }
     }
