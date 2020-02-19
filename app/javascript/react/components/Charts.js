@@ -5,7 +5,7 @@ const Charts = (props) => {
   let array = props.lineitems
   let emptyArray = [['LineItem', 'Value']]
     let chartData = array.map((item) =>{
-      if(item.category === "expense") {
+      if(item.category === "Expense") {
       emptyArray.push([item.lineitem, item.value])
       }
     })
@@ -21,7 +21,8 @@ const Charts = (props) => {
         data={emptyArray}
         options={{
           title: `${props.month.month} expenses, you have $${props.remainingToBudget(props.lineitems)} left to budget to reach a zero based budget!`,
-          is3D: true
+          is3D: true,
+          backgroundColor:'transparent'
         }}
         rootProps={{ 'data-testid': '1' }}
       />
