@@ -1,5 +1,6 @@
 class Api::V1::MonthsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :show, :create]
+  before_action :authenticate_user!, only: [:index, :show, :create, :update]
+  # before_action :authorize_user, only: [:create, :update]
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
@@ -10,6 +11,16 @@ class Api::V1::MonthsController < ApplicationController
   def show
     render json: Month.find(params["id"])
   end
+
+  def update
+    month = Month.find(params[:id])
+    if current_user == month.user
+      month.update_attributes(month_params)
+      render json: month
+    else
+      render json: Month.all
+  end
+end
 
   def create
     month = Month.new(month_params)
