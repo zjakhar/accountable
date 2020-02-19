@@ -62,8 +62,8 @@ const MonthsIndex = (props) => {
   })
 
   return (
-    <div className="test">
-      <div className="Grid">
+    <div className="test container">
+      <div className="Grid row">
         { monthTiles }
       </div>
       <MonthsForm

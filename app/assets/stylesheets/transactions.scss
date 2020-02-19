@@ -26,11 +26,28 @@
   text-align: left;
   display: block;
   width: 30%;
-  // margin: auto;
+  float: left;
+  margin: 40px;
 }
 
 .chart {
   display: inline-block;
   background-color: transparent;
+}
 
+.zerobased {
+  float: right;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aaa;
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+  min-height: 200px;
+  border: 2px #ccc solid;
+  color: #fff;
 }

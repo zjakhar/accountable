@@ -10,8 +10,8 @@ const LineitemsForm = (props) => {
     value: 0
   })
 
-  const typeDropdown = ['income', 'expense']
-  const typeOptions = typeDropdown.map((type) => <option key={type} value={type}>{type}</option)
+  const typeDropdown = ['Income', 'Expense']
+  const typeOptions = typeDropdown.map((type) => <option key={type} value={type}>{type}</option>)
 
   const lineitemsDropdown = ['Paycheck', 'Mortgage/Rent', 'Utilities', 'Insurance', 'Transportation/Gas', 'Groceries', 'Debt', 'Life Style', 'Savings', 'Giving', 'Other']
   const lineitemOptions = lineitemsDropdown.map((lineitem) => <option key={lineitem} value={lineitem}>{lineitem}</option>)
@@ -97,7 +97,6 @@ const LineitemsForm = (props) => {
           className="button"
           value="Submit Budget"
         />
-
       </form>
     </div>
   )

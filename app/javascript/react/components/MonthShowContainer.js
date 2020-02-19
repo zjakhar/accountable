@@ -97,33 +97,14 @@ const MonthShowContainer = (props) => {
     )
   })
 
-  // const budgetTotal = (number) => {
-  //   debugger
-  //   let i = 0
-  //   let income = 0
-  //   let total = 0
-  //   let expense = 0
-  //   for (i; i < lineitems.length; i++) {
-  //     if (number.category === "income") {
-  //       income = lineitems[i].value
-  //       total = total + income
-  //     }
-  //     if (income > 0 && number.category === "expense") {
-  //       expense = lineitems[i].value
-  //       total = total - expense
-  //     }
-  //     return total
-  //   }
-  // }
-
   const remainingToBudget = (lineitems) => {
     let income = 0
     let expense = 0
     let i = 0
     for (i; i < lineitems.length; i++) {
-      if (lineitems[i].category === "income") {
+      if (lineitems[i].category === "Income") {
         income = income + lineitems[i].value
-      } else if (lineitems[i].category === "expense") {
+      } else if (lineitems[i].category === "Expense") {
         expense = expense + lineitems[i].value
       }
     }
@@ -131,24 +112,29 @@ const MonthShowContainer = (props) => {
   }
 
   return (
-    <div className="row test">
-      <MonthShow
-        month = { month }
-      />
-    <div className="columns small-4 left-box">
-      {lineitemTile}
-    </div>
-    <div className="columns small-4">
-      <Charts
-        lineitems = { lineitems }
-        month = { month }
-        remainingToBudget = { remainingToBudget }
+    <div className="test">
+      <div className="container ">
+        <MonthShow
+          month = { month }
         />
-    </div>
+      <div className="charts columns small-4">
+        <Charts
+          lineitems = { lineitems }
+          month = { month }
+          remainingToBudget = { remainingToBudget }
+        />
+      </div>
+      <div className="columns small-4 left-box">
+        {lineitemTile}
+      </div>
+      <br/>
+      <div className="row zerobased">
       <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
+      </div>
       <LineitemsForm
-        onSubmit = { submitNewLineitem }
+      onSubmit = { submitNewLineitem }
       />
+      </div>
     </div>
   )
 }

@@ -5,11 +5,11 @@ const MonthTile = ({ monthData }) => {
   let { id, month } = monthData
 
   return (
-    <div className="test">
-      <Link to={`/months/${id}`}>
-        <div className="Grid-item">{ month }</div>
-      </Link>
-    </div>
+      <div className="">
+        <Link to={`/months/${id}`}>
+          <div className="Grid-item">{ month }</div>
+        </Link>
+      </div>
   )
 }
 
