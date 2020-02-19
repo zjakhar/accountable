@@ -129,11 +129,11 @@ const MonthShowContainer = (props) => {
       </div>
       <br/>
       <div className="row zerobased">
-      <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
+        <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
       </div>
-      <LineitemsForm
-      onSubmit = { submitNewLineitem }
-      />
+        <LineitemsForm
+        onSubmit = { submitNewLineitem }
+        />
       </div>
     </div>
   )
