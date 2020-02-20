@@ -5,7 +5,7 @@ const MonthTile = ({ monthData }) => {
   let { id, month } = monthData
 
   return (
-      <div className="">
+      <div>
         <Link to={`/months/${id}`}>
           <div className="Grid-item">{ month }</div>
         </Link>
