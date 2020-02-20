@@ -4,7 +4,7 @@ import LineitemTile from './LineitemTile'
 
 const MonthShow = (props) => {
   return(
-    <div className="test">
+    <div>
       <h1 className="month-title">Your Budget for {props.month.month}</h1>
         <Link to={`/month/${props.month.id}/edit`} className = "button">Edit Month</Link>
     </div>
