@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 body, html {
   height: 100%;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: sans-serif;
   line-height: 180%;
   color: #666;
   text-align: center;
@@ -20,7 +19,14 @@ a.logo {
 
 .welcome {
   color: white;
+  font-size: 20px;
+  text-shadow: 0 0 25px black;
 }
+
+.major {
+  text-shadow: 0 0 15px black;
+}
+
 nav{
   position: fixed;
   top:0;
@@ -107,7 +113,6 @@ section {
   height: 70vh;
   overflow: hidden;
   color: #BBB;
-  opacity: .9;
 }
 
 section h2 {
@@ -136,7 +141,7 @@ section .cover img {
 section .content {
   position: absolute;
   display: block;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -189,7 +194,6 @@ input {
   border-radius: 3px;
   width: auto;
   text-align: center;
-
 }
 
 .button {
