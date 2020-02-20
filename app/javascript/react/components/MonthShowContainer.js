@@ -112,7 +112,7 @@ const MonthShowContainer = (props) => {
   }
 
   return (
-    <div className="test">
+    <div>
       <div className="container ">
         <MonthShow
           month = { month }
