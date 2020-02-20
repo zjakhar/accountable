@@ -9,44 +9,34 @@
   text-align: center;
   height: 5%;
   width: 40%;
-  border: 2px gold;
 }
 
 .month-title {
   text-align: left;
 }
 
+.month-text {
+  color: white;
+  font-size: 35px;
+  font-family: Varela Round, sans-serif;
+}
+
 .Grid {
-  // display: inline-flex;
   flex-wrap: wrap;
 
   &-item {
     width: 100%;
     height:250px;
-    background: firebrick;
+    background: #8CBD3D;
     margin: 2%;
     float: left;
 
-    @media (min-width: 68rem) {
+    @media (min-width: 40rem) {
       width: 20.5%;
-      &:nth-child(even) {
+      &:nth-child(odd) {
         background-image: grey;
         margin-right: 2%;
       }
-    }
-
-    @media (min-width: 43rem) {
-      width: 20.5%;
-      &:not(:nth-child(4n)) {
-        background: #8CBD3D;
-        margin-right: 2%;
-      }
-    }
-
-    &:before {
-      content: "";
-      float: left;
-      padding-top: 100%;
     }
   }
 }
