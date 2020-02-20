@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/months", to: 'homes#index'
   get "/about", to: 'homes#index'
   get "/contact", to: 'homes#index'
+  get "/advisors", to: 'homes#index'
   get "/month/:id/edit", to: 'homes#index'
   get "/months/:id", to: 'homes#index'
 
