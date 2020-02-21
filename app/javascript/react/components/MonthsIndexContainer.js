@@ -62,14 +62,22 @@ const MonthsIndex = (props) => {
   })
 
   return (
-    <div className="container">
-      <div className="Grid row">
-        { monthTiles }
-      </div>
-      <MonthsForm
-        onSubmit = { submitNewMonth }
-      />
+  <div>
+    <div className="grid-x">
+      <div className="cell small-12 month-title">Start Your Budget by Selecting a Month</div>
     </div>
+    <div className="grid-x">
+      <div className="cell medium-12">
+        <MonthsForm
+        onSubmit = { submitNewMonth }
+        />
+      </div>
+      <div >
+        <div className="cell small-3">{ monthTiles }
+      </div>
+    </div>
+    </div>
+  </div>
   )
 }
 
