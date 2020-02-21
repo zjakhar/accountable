@@ -12,35 +12,46 @@
 }
 
 .month-title {
+  padding: 20px;
   text-align: left;
+  font-size: 40px;
+  color: #F3BC2B;
+  text-shadow: 0 0 1px black;
+}
+
+@media screen and (max-width: 892px) {
+  .month-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .month-title {
+    font-size: 20px;
+  }
 }
 
 .month-text {
   color: white;
+  text-align: center;
+  text-shadow: 0 0 20px black;
   font-size: 35px;
   font-family: Varela Round, sans-serif;
-}
-
-.Grid {
-  flex-wrap: wrap;
-
-  &-item {
-    width: 100%;
-    height:250px;
-    background: #8CBD3D;
-    margin: 2%;
-    float: left;
-
-    @media (min-width: 40rem) {
-      width: 20.5%;
-      &:nth-child(odd) {
-        background-image: grey;
-        margin-right: 2%;
-      }
-    }
-  }
+  padding-bottom: 65%;
 }
 
 .edit {
   margin-top: 200px;
+}
+
+.calendar {
+  padding: 70px;
+  margin: 2%;
+  background-image: url(https://cdn2.iconfinder.com/data/icons/red-gray/520/Calendar-512.png);
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  width: 290px;
+  height: auto;
 }

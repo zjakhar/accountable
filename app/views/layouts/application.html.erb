@@ -6,8 +6,8 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <nav class="top-bar">
+<body class="grid-container fluid">
+  <nav class="top-bar grid-x grid-margin-x">
     <h1><a href="/" class="logo">
       <%= image_tag("color.png")%>
     </a></h1>
@@ -27,9 +27,6 @@
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-          <li>
-              <img class="profile-pic sign" src = <%= current_user.profile_photo %> alt="Profile Picture">
-          </li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>

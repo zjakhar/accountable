@@ -11,6 +11,24 @@ body, html {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 655px) {
+  .test {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .test {
+    margin-top: 230px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .test {
+    margin-top: 280px;
+  }
+}
+
 a.logo {
   max-height: 200px;
     overflow: hidden;
