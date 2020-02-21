@@ -69,7 +69,7 @@ const MonthsIndex = (props) => {
     <div className="grid-x">
       <div className="cell medium-12">
         <MonthsForm
-        onSubmit = { submitNewMonth }
+          onSubmit = { submitNewMonth }
         />
       </div>
       <div >
