@@ -9,7 +9,6 @@ const MonthShowContainer = (props) => {
   let monthId = props.match.params.id
   const [month, setMonth] = useState({})
   const [lineitems, setLineitems] = useState([])
-  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   useEffect(() => {
     fetch(`/api/v1/months/${monthId}`)
@@ -76,13 +75,9 @@ const MonthShowContainer = (props) => {
     })
     .then(response => response.json())
     .then(body => {
-      setShouldRedirect(true)
+      window.location.reload()
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
-  }
-
-  if(shouldRedirect) {
-    return <Redirect to={`/months/${monthId}`} />
   }
 
   const lineitemTile = lineitems.map((lineitem) => {
