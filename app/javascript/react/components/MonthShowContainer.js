@@ -108,27 +108,34 @@ const MonthShowContainer = (props) => {
 
   return (
     <div>
-      <div className="container ">
-        <MonthShow
-          month = { month }
-        />
-      <div className="charts columns small-4">
+      <div className="grid-x">
+        <div className="cell">
+          <MonthShow
+            month = { month }
+          />
+        </div>
+        <div className="cell">
         <Charts
           lineitems = { lineitems }
           month = { month }
           remainingToBudget = { remainingToBudget }
-        />
+          />
+        </div>
       </div>
-      <div className="columns small-4 left-box">
-        {lineitemTile}
+      <div className="grid-x">
+        <div className="cell small-6">
+          {lineitemTile}
+        </div>
+        <div className="cell small-6">
+          <LineitemsForm
+            onSubmit = { submitNewLineitem }
+          />
+        </div>
       </div>
-      <br/>
-      <div className="row zerobased">
-        <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
-      </div>
-        <LineitemsForm
-        onSubmit = { submitNewLineitem }
-        />
+      <div className="grid-x">
+        <div className="cell">
+          <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
+        </div>
       </div>
     </div>
   )
