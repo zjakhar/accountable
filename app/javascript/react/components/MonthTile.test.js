@@ -25,7 +25,7 @@ describe("MonthTile", () => {
    )
  })
 
- it("should render a tag with className Grid containing the month received via props", () => {
-   expect(wrapper.find('.Grid-item').text()).toBe("January")
+ it("should render a tag with className month-text containing the month received via props", () => {
+   expect(wrapper.find('.month-text').text()).toBe("January")
  });
 })
