@@ -1,5 +1,5 @@
 .wrap{
-  // border: 2px solid black;
+  border: 2px solid black;
   display: flex;
   flex-wrap: wrap;
 }
@@ -8,7 +8,7 @@
   flex: 1 0 calc(25% - 10px);
   margin: 5px;
   background: transparent;
-  color: white;
+  color: #F3BC2B;
 }
 
 .square:after{
@@ -17,7 +17,34 @@
   padding-bottom: 100%;
 }
 
-.box2{background: #AC71D0;}
-.box3{background: transparent;}
-.box4{background: #A6D98C;}
-.box5{background: #bada55;}
+.about-graph {
+  margin-top: 100px;
+  color: #8CBD3D;
+  text-shadow: 0 0 15px lightgrey;
+}
+
+.about-calendar {
+  margin-top: 140px;
+  color: #8CBD3D;
+  text-shadow: 0 0 15px lightgrey;
+}
+
+.about {
+  padding: 20px;
+}
+
+.about-header {
+ color: #F3BC2B;
+ text-shadow: 0 0 10px lightgrey;
+}
+
+.about-intro {
+  color: #8CBD3D;
+  text-shadow: 0 0 10px lightgrey;
+}
+
+.about-map {
+  padding-top: 160px;
+  color: #8CBD3D;
+  text-shadow: 0 0 15px lightgrey;
+}
