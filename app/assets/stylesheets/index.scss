@@ -37,7 +37,7 @@ a.logo {
 
 .welcome {
   color: white;
-  font-size: 25px;
+  font-size: 22px;
   text-shadow: 0 0 25px black;
 }
 
@@ -218,11 +218,10 @@ input {
 .button {
   background: #f3bc2c;
   font-weight: 400;
-  padding: 1% 2%;
   border-radius: 3px;
   width: auto;
   text-align: center;
-  text-shadow: 0 0 4px black;
+  text-shadow: 0 0 10px grey;
 }
 
 .profile-pic {
@@ -232,4 +231,9 @@ input {
 
 .float-title {
   float: left;
+}
+
+h1, h3 {
+  color: white;
+  margin-bottom: 35px;
 }
