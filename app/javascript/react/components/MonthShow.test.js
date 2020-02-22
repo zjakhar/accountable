@@ -13,7 +13,7 @@ describe("MonthShow", () => {
  beforeEach(() => {
    month = {
      id: 1,
-     month: "January"
+     month: "JANUARY"
    }
 
    wrapper = mount(
@@ -26,6 +26,6 @@ describe("MonthShow", () => {
  })
 
  it("should render a tag with className month-title containing the Month Name received via props", () => {
-   expect(wrapper.find('.month-title').text()).toBe("Your Budget for January")
+   expect(wrapper.find('.month-title').text()).toBe("YOUR BUDGET FOR JANUARY")
  });
 })
