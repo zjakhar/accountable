@@ -9,8 +9,8 @@ const LineitemTile = (props) => {
 
   return (
     <div className="budget-item">
-      <li className = "lineitem">{props.lineitemData.lineitem}: {props.lineitemData.value}</li>
-      <input onClick={handleDelete} className="delete-button" type="submit" value="Delete"/>
+      <li className = "lineitem">{props.lineitemData.lineitem}: ${props.lineitemData.value}</li>
+      <i onClick={handleDelete} className="far fa-trash-alt"></i>
     </div>
   )
 }
