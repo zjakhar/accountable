@@ -3,14 +3,15 @@
 <head>
   <title>Accountable</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/f4fea14c70.js" crossorigin="anonymous"></script>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body class="grid-container fluid">
   <nav class="top-bar grid-x grid-margin-x">
-    <h1><a href="/" class="logo">
+    <a href="/" class="logo">
       <%= image_tag("color.png")%>
-    </a></h1>
+    </a>
     <ul>
       <%- if current_user -%>
         <a href="/months"><li>Home</li></a>
@@ -20,9 +21,6 @@
         <a href="/"><li>Home</li></a>
         <a href="/about"><li>About</li></a>
       <%- end -%>
-    </ul>
-    <div class="top-bar-section">
-      <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
@@ -30,7 +28,6 @@
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
-    </div>
   </nav>
 
   <%- flash.each do |key, value| -%>
