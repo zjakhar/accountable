@@ -18,13 +18,20 @@
 }
 
 .about-graph {
-  margin-top: 100px;
+  padding: 10%;
+  max-height: 300px;
   color: #8CBD3D;
   text-shadow: 0 0 15px lightgrey;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-graph {
+    font-size: 20px;
+  }
+}
+
 .about-calendar {
-  margin-top: 140px;
+  padding: 15%;
   color: #8CBD3D;
   text-shadow: 0 0 15px lightgrey;
 }
@@ -39,12 +46,13 @@
 }
 
 .about-intro {
+  padding: 2%;
   color: #8CBD3D;
   text-shadow: 0 0 10px lightgrey;
 }
 
 .about-map {
-  padding-top: 160px;
+  padding: 3%;
   color: #8CBD3D;
   text-shadow: 0 0 15px lightgrey;
 }
