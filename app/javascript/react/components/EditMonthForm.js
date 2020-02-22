@@ -10,7 +10,7 @@ const EditMonthForm = (props) => {
     month: ""
   })
 
-  const monthDropDown = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  const monthDropDown = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
   const monthOptions = monthDropDown.map((month) => <option key={month} value={month}>{month}</option>)
   const [errors, setErrors] = useState({})
 
@@ -95,7 +95,7 @@ const EditMonthForm = (props) => {
         <input
           type="submit"
           className="button"
-          value="Edit Month"
+          value="EDIT MONTH"
         />
       </form>
     </div>

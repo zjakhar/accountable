@@ -30,6 +30,6 @@ describe("LineitemTile", () => {
  })
 
  it("should render a tag with className lineitem containing the Lineitem received via props", () => {
-   expect(wrapper.find('.lineitem').text()).toBe("paycheck: 890")
+   expect(wrapper.find('.lineitem').text()).toBe("paycheck: $890")
  });
 })
