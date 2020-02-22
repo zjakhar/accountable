@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import LineitemsForm from './LineitemsForm'
 import MonthShow from './MonthShow'
 import LineitemTile from './LineitemTile'
@@ -114,19 +114,32 @@ const MonthShowContainer = (props) => {
             month = { month }
           />
         </div>
-        <div className="cell">
-        <Charts
-          lineitems = { lineitems }
-          month = { month }
-          remainingToBudget = { remainingToBudget }
+      </div>
+      <div className="grid-x">
+        <div className="cell small-6">
+          <h3>EXPENSE CHART</h3>
+          <Charts
+            lineitems = { lineitems }
+            month = { month }
+            remainingToBudget = { remainingToBudget }
+          />
+        </div>
+        <div className="cell small-6">
+          <h3>EXPENSE CHART</h3>
+          <Charts
+            lineitems = { lineitems }
+            month = { month }
+            remainingToBudget = { remainingToBudget }
           />
         </div>
       </div>
       <div className="grid-x">
         <div className="cell small-6">
+          <h3>BUDGET LINE ITEMS</h3>
           {lineitemTile}
         </div>
         <div className="cell small-6">
+          <h3>ENTER YOUR INCOME/EXPENSES</h3>
           <LineitemsForm
             onSubmit = { submitNewLineitem }
           />
@@ -135,6 +148,7 @@ const MonthShowContainer = (props) => {
       <div className="grid-x">
         <div className="cell">
           <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
+          <Link to={`/month/${month.id}/edit`} className = "button">EDIT MONTH</Link>
         </div>
       </div>
     </div>
