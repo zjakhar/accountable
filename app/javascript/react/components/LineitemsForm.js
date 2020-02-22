@@ -56,7 +56,7 @@ const LineitemsForm = (props) => {
       <form onSubmit={handleSubmit} className="trans-form">
         <ErrorsList errors={errors} />
         <label>
-          Income or Expense?
+          INCOME OR EXPENSE?
           <select
             name="category"
             id="category"
@@ -69,7 +69,7 @@ const LineitemsForm = (props) => {
           </select>
         </label>
 
-        <label>Categories
+        <label>CATEGORIES
           <select
             name="lineitem"
             id="lineitem"
@@ -82,7 +82,7 @@ const LineitemsForm = (props) => {
           </select>
         </label>
 
-        <label>Value
+        <label>VALUE
           <input
             name="value"
             id="value"
@@ -95,7 +95,7 @@ const LineitemsForm = (props) => {
         <input
           type="submit"
           className="button"
-          value="Submit Budget"
+          value="SUBMIT BUDGET"
         />
       </form>
     </div>
