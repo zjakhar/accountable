@@ -5,7 +5,7 @@ const About = (props) => {
     <div>
       <div className="grid-x">
         <div className="about-header cell">
-          <h1>About Accountable</h1>
+          <h2>About Accountable</h2>
         </div>
         <div className="about-intro cell">
           Accountable was founded in February of 2020 by Zain Jakhar while he was an Apprentice Web Developer at Launch Academy. The Purpose of Accountable is to have easy access to a zero based budgeting software. Easily track your income and expense, by budgeting them in advance.
