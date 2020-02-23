@@ -1,6 +1,7 @@
 class Api::V1::MonthsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :show, :create, :update]
-  # before_action :authorize_user, only: [:create, :update]
+  before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
+
+
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
@@ -29,6 +30,16 @@ end
       render json: month
     else
       render json: { error: album.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    month = Month.find(params[:id])
+    if current_user == month.user
+      month.destroy
+      render json: { message: "Delete Successful."}
+    else
+      render json: { message: "Could not delete."}
     end
   end
 
