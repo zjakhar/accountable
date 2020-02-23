@@ -26,3 +26,10 @@ bundle exec rspec
 yarn test
 ```
 
+Credits
+
+	Images:
+		unsplash.com
+
+	Icons:
+		fontawesome.io
