@@ -64,7 +64,7 @@ const MonthsIndex = (props) => {
   return (
   <div>
     <div className="grid-x">
-      <div className="cell small-12 month-title">Start Your Budget by Selecting a Month</div>
+      <div className="cell small-12 month-title">YOUR MONTHLY BUDGETS</div>
     </div>
     <div className="grid-x">
       <div className="cell medium-12">
