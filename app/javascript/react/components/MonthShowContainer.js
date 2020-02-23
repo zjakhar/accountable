@@ -10,6 +10,7 @@ const MonthShowContainer = (props) => {
   let monthId = props.match.params.id
   const [month, setMonth] = useState({})
   const [lineitems, setLineitems] = useState([])
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   useEffect(() => {
     fetch(`/api/v1/months/${monthId}`)
@@ -93,6 +94,40 @@ const MonthShowContainer = (props) => {
     )
   })
 
+  const deleteMonth = (monthId) => {
+    fetch(`/api/v1/months/${monthId}`, {
+      credentials: "same-origin",
+      method: 'DELETE',
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+         error = new Error(errorMessage)
+        throw error
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      setShouldRedirect(true)
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`));
+  }
+
+  const handleDelete = (event) => {
+    event.preventDefault()
+    deleteMonth(monthId)
+  }
+  
+  if(shouldRedirect) {
+    return <Redirect to={"/months"} />
+  }
+
   const remainingToBudget = (lineitems) => {
     let income = 0
     let expense = 0
@@ -150,6 +185,7 @@ const MonthShowContainer = (props) => {
         <div className="cell">
           <h5 className="budget-headers">Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
           <Link to={`/month/${month.id}/edit`} className = "button">EDIT MONTH</Link>
+          <input onClick={handleDelete} className="button" type="submit" value="DELETE MONTH"/>
         </div>
       </div>
     </div>
