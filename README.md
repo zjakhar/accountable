@@ -12,8 +12,7 @@ Ruby 2.6.5
 
 * System dependencies
   Rails, JavaScript
-* Configuration
-  
+
 * Database creation
 ```
 bundle exec db:create
