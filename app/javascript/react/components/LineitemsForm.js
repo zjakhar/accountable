@@ -82,7 +82,7 @@ const LineitemsForm = (props) => {
           </select>
         </label>
 
-        <label>VALUE <span className="symbol">(no comma)</span>
+        <label>DOLLAR AMOUNT <span className="symbol">(no comma)</span>
           <input
             name="value"
             id="value"
