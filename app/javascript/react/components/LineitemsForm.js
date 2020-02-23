@@ -13,7 +13,7 @@ const LineitemsForm = (props) => {
   const typeDropdown = ['Income', 'Expense']
   const typeOptions = typeDropdown.map((type) => <option key={type} value={type}>{type}</option>)
 
-  const lineitemsDropdown = ['Paycheck', 'Mortgage/Rent', 'Utilities', 'Insurance', 'Transportation/Gas', 'Groceries', 'Debt', 'Life Style', 'Savings', 'Giving', 'Other']
+  const lineitemsDropdown = ['Paycheck', 'Rental Income', 'Other Income', 'Mortgage/Rent', 'Utilities', 'Insurance', 'Transportation/Gas', 'Groceries', 'Debt', 'Life Style', 'Savings', 'Giving', 'Other']
   const lineitemOptions = lineitemsDropdown.map((lineitem) => <option key={lineitem} value={lineitem}>{lineitem}</option>)
 
   const handleChange = (event) => {
