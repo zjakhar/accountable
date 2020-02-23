@@ -3,6 +3,7 @@ import { Redirect, Link } from 'react-router-dom'
 import LineitemsForm from './LineitemsForm'
 import MonthShow from './MonthShow'
 import LineitemTile from './LineitemTile'
+import IncomeChart from './IncomeChart'
 import Charts from './Charts'
 
 const MonthShowContainer = (props) => {
@@ -117,7 +118,7 @@ const MonthShowContainer = (props) => {
       </div>
       <div className="grid-x">
         <div className="cell small-6">
-          <h3>EXPENSE CHART</h3>
+          <h3 className="budget-headers">EXPENSE CHART</h3>
           <Charts
             lineitems = { lineitems }
             month = { month }
@@ -125,8 +126,8 @@ const MonthShowContainer = (props) => {
           />
         </div>
         <div className="cell small-6">
-          <h3>EXPENSE CHART</h3>
-          <Charts
+          <h3 className="budget-headers">INCOME CHART</h3>
+          <IncomeChart
             lineitems = { lineitems }
             month = { month }
             remainingToBudget = { remainingToBudget }
@@ -135,11 +136,11 @@ const MonthShowContainer = (props) => {
       </div>
       <div className="grid-x">
         <div className="cell small-6">
-          <h3>BUDGET LINE ITEMS</h3>
+          <h3 className="budget-headers">BUDGET LINE ITEMS</h3>
           {lineitemTile}
         </div>
         <div className="cell small-6">
-          <h3>ENTER YOUR INCOME/EXPENSES</h3>
+          <h3 className="budget-headers">ENTER YOUR INCOME/EXPENSES</h3>
           <LineitemsForm
             onSubmit = { submitNewLineitem }
           />
@@ -147,7 +148,7 @@ const MonthShowContainer = (props) => {
       </div>
       <div className="grid-x">
         <div className="cell">
-          <h5>Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
+          <h5 className="budget-headers">Remaining left to Budget for this month is: ${remainingToBudget(lineitems)}</h5>
           <Link to={`/month/${month.id}/edit`} className = "button">EDIT MONTH</Link>
         </div>
       </div>
