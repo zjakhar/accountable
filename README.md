@@ -12,12 +12,6 @@ Ruby 2.6.5
 
 * System dependencies
   Rails, JavaScript
-  
-Make sure you have the most updated version of make_it_so and use it to create a Rails app:
-```
-gem install make_it_so
-make_it_so rails <your_app_name>
-```
 
 Create your database and migrate the tables necessary for the configuration:
 ```
