@@ -12,11 +12,29 @@ Ruby 2.6.5
 
 * System dependencies
   Rails, JavaScript
+  
+Make sure you have the most updated version of make_it_so and use it to create a Rails app:
+```
+gem install make_it_so
+make_it_so rails <your_app_name>
+```
 
-* Database creation
+Create your database and migrate the tables necessary for the configuration:
 ```
-bundle exec db:create
+$ bundle exec rake db:create
+$ bundle exec rake db:migrate
 ```
+To start server localhost:3000
+```
+$ bundle install
+$ rails s
+```
+And in another tab run the following:
+```
+$ yarn install
+$ yarn run start
+```
+
 * How to run the test suite: (this includes, model testing, controller testing, feature testing)
 Run the following in your terminal:
 ```
