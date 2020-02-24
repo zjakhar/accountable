@@ -99,4 +99,40 @@ end
     end
   end
 
+  describe "DELETE#destroy" do
+    context 'When a user clicks the delete button' do
+      let!(:user) { User.create(
+        id:1,
+        first_name: "John",
+        last_name: "Doe",
+        email: "email@email.com",
+        role: "member",
+        password: "123456"
+      ) }
+
+      let!(:first_month) { Month.create(
+        month: "January",
+        user: user
+      ) }
+      let!(:second_month) { Month.create(
+        month: "February",
+        user: user
+      ) }
+
+    it "should delete the desired month." do
+      sign_in user
+      prev_count = Month.count
+      Month.destroy(first_month.id)
+      expect(Month.count).to eq(prev_count - 1)
+      end
+
+    it "should delete the desired month." do
+      sign_in user
+      prev_count = Month.count
+      Month.destroy(second_month.id)
+      expect(Month.count).to eq(prev_count - 1)
+      end
+    end
+  end
+
 end
