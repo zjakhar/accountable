@@ -7,11 +7,11 @@ By Zain Jakhar
 
 This app helps users keep track of their montly budget.
 
-* Ruby version
+Ruby version
 Ruby 2.6.5    
 
-* System dependencies
-  Rails, JavaScript
+System dependencies
+Rails, JavaScript
 
 Create your database and migrate the tables necessary for the configuration:
 ```
@@ -29,7 +29,7 @@ $ yarn install
 $ yarn run start
 ```
 
-* How to run the test suite: (this includes, model testing, controller testing, feature testing)
+How to run the test suite: (this includes, model testing, controller testing, feature testing)
 Run the following in your terminal:
 ```
 bundle exec rspec
