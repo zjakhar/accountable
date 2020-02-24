@@ -39,8 +39,6 @@ $ yarn run start
 Run the following in your terminal:
 ```
 bundle exec rspec
-```
-```
 yarn test
 ```
 
