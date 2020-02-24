@@ -32,8 +32,8 @@ $ yarn run start
 How to run the test suite: (this includes, model testing, controller testing, feature testing)
 Run the following in your terminal:
 ```
-bundle exec rspec
-yarn test
+$ bundle exec rspec
+$ yarn test
 ```
 
 Credits
