@@ -4,28 +4,28 @@ import Adapter from "enzyme-adapter-react-16"
 import { BrowserRouter, Link } from "react-router-dom"
 Enzyme.configure({ adapter: new Adapter() })
 
-import MonthShow from "./MonthShow"
+import MonthTile from "../MonthTile"
 
-describe("MonthShow", () => {
+describe("MonthTile", () => {
   let wrapper
-  let month
+  let monthData
 
  beforeEach(() => {
-   month = {
+   monthData = {
      id: 1,
-     month: "JANUARY"
+     month: "January"
    }
 
    wrapper = mount(
     <BrowserRouter>
-      <MonthShow
-        month={ month }
+      <MonthTile
+        monthData={ monthData }
       />
     </BrowserRouter>
    )
  })
 
- it("should render a tag with className month-title containing the Month Name received via props", () => {
-   expect(wrapper.find('.month-title').text()).toBe("YOUR BUDGET FOR JANUARY")
+ it("should render a tag with className month-text containing the month received via props", () => {
+   expect(wrapper.find('.month-text').text()).toBe("January")
  });
 })

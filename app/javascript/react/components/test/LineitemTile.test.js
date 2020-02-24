@@ -4,7 +4,7 @@ import Adapter from "enzyme-adapter-react-16"
 import { BrowserRouter, Link } from "react-router-dom"
 Enzyme.configure({ adapter: new Adapter() })
 
-import LineitemTile from "./LineitemTile"
+import LineitemTile from "../LineitemTile"
 
 describe("LineitemTile", () => {
   let wrapper

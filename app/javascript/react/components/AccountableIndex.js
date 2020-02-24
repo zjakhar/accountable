@@ -10,9 +10,9 @@ const AccountableIndex = (props) => {
           <div className="text centralize">
             <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
               <header className="major">
-                <h1>TAKE CONTROL OF YOUR FUTURE</h1>
+                <h1 className="first-title">TAKE CONTROL OF YOUR FUTURE</h1>
               </header>
-              <p className="welcome"><i class="fas fa-check"></i> Give Every Dollar a Purpose</p><p className="welcome"><i class="fas fa-check"></i> Eliminate Debt</p><p className="welcome"><i class="fas fa-check"></i> Reduce Stress</p>
+              <p className="first-check welcome"><i className="fas fa-check"></i> Give Every Dollar a Purpose</p><p className="second-check welcome"><i className="fas fa-check"></i> Eliminate Debt</p><p className="third-check welcome"><i className="fas fa-check"></i> Reduce Stress</p>
               <a href="/users/sign_up" className="button">JOIN FOR FREE</a>
             </div>
           </div>
@@ -25,9 +25,9 @@ const AccountableIndex = (props) => {
           <div className="text centralize">
             <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
               <header className="major">
-                <h3>CREATE MONTHLY BUDGETS TO HELP TAKE BACK CONTROL OF YOUR INCOME</h3>
+                <h3 className="second-title">CREATE MONTHLY BUDGETS TO HELP TAKE BACK CONTROL OF YOUR INCOME</h3>
               </header>
-              <p className="welcome">The simple act of budgeting and determining your monies uses affects human behavior. Labeling our money’s uses, and the goods we purchase as an appropriate use for that money, leads to changed behavior. In the case of a budget, assigning our money leads to living within our means and saving money.</p>
+              <p className="second-paragraph welcome">The simple act of budgeting and determining your monies uses affects human behavior. Labeling our money’s uses, and the goods we purchase as an appropriate use for that money, leads to changed behavior. In the case of a budget, assigning our money leads to living within our means and saving money.</p>
             </div>
           </div>
         </div>
@@ -40,9 +40,9 @@ const AccountableIndex = (props) => {
           <div className="text centralize">
             <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
               <header className="cell small-6 major">
-                <h3 className="">NO LONGER LIVE WITH UNNECESSARY STRESS</h3>
+                <h3 className="third-title">NO LONGER LIVE WITH UNNECESSARY STRESS</h3>
               </header>
-              <p className="welcome">Make a plan for your income. Accountable provides you with a template for budgeting your monthly expenses. When you know where you are spending your money, you will easily find ways to cut out unnecessary spending.</p>
+              <p className="third-paragraph welcome">Make a plan for your income. Accountable provides you with a template for budgeting your monthly expenses. When you know where you are spending your money, you will easily find ways to cut out unnecessary spending.</p>
             </div>
           </div>
         </div>
@@ -53,9 +53,9 @@ const AccountableIndex = (props) => {
           <div className="text centralize">
             <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
               <header className="major">
-                <h3>FIND FINANCIAL PLANNERS NEAR YOU</h3>
+                <h3 className="fourth-title">FIND FINANCIAL PLANNERS NEAR YOU</h3>
               </header>
-              <p className="welcome">Use our Google Maps feature to find Financial Planners in the city you live in.</p>
+              <p className="fourth-paragraph welcome">Use our Google Maps feature to find Financial Planners in the city you live in.</p>
               <a href="/users/sign_up" className="button">JOIN FOR FREE</a>
             </div>
           </div>
