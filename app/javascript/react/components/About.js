@@ -32,7 +32,7 @@ const About = (props) => {
           <img src="https://i.imgur.com/AabnrN4.png" />
         </div>
         <div className="about about-map cell small-6">
-          Easily find local Financial Advisors
+           Find Locations on the Map for Financial Advisors
         </div>
       </div>
     </div>
