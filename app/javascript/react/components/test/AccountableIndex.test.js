@@ -45,11 +45,11 @@ describe("AccountableIndex", () => {
    expect(wrapper.find('.third-paragraph').text()).toBe("Make a plan for your income. Accountable provides you with a template for budgeting your monthly expenses. When you know where you are spending your money, you will easily find ways to cut out unnecessary spending.")
   });
 
-  it("should render a tag with className fourth-title containing text FIND FINANCIAL PLANNERS NEAR YOU", () => {
-   expect(wrapper.find('.fourth-title').text()).toBe("FIND FINANCIAL PLANNERS NEAR YOU")
+  it("should render a tag with className fourth-title containing text FIND FINANCIAL ADVISORS", () => {
+   expect(wrapper.find('.fourth-title').text()).toBe("FIND FINANCIAL ADVISORS")
   });
 
-  it("should render a tag with className fourth-paragraph containing text Use our Google Maps feature to find Financial Planners in the city you live in.", () => {
-   expect(wrapper.find('.fourth-paragraph').text()).toBe("Use our Google Maps feature to find Financial Planners in the city you live in.")
+  it("should render a tag with className fourth-paragraph containing text Use our Google Maps feature to find Map Locations of Financial Advisors in the city you live in.", () => {
+   expect(wrapper.find('.fourth-paragraph').text()).toBe("Use our Google Maps feature to find Map Locations of Financial Advisors in the city you live in.")
   });
 })
