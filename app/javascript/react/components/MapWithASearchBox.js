@@ -67,9 +67,11 @@ const MapWithASearchBox = compose(
   withGoogleMap
 )(props =>
   <div className="map">
+  <h2>SEE LOCATIONS OF ADVISORS</h2>
+  <h4>To See more details zoom in and click on coresponding marker.</h4>
     <GoogleMap
       ref={props.onMapMounted}
-      defaultZoom={15}
+      defaultZoom={19}
       center={props.center}
       onBoundsChanged={props.onBoundsChanged}
     >
