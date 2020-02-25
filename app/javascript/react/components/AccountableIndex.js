@@ -53,9 +53,9 @@ const AccountableIndex = (props) => {
           <div className="text centralize">
             <div data-scrollax="properties: { 'translateY': '150%', 'opacity': 1.5 }">
               <header className="major">
-                <h3 className="fourth-title">FIND FINANCIAL PLANNERS NEAR YOU</h3>
+                <h3 className="fourth-title">FIND FINANCIAL ADVISORS</h3>
               </header>
-              <p className="fourth-paragraph welcome">Use our Google Maps feature to find Financial Planners in the city you live in.</p>
+              <p className="fourth-paragraph welcome">Use our Google Maps feature to find Map Locations of Financial Advisors in the city you live in.</p>
               <a href="/users/sign_up" className="button">JOIN FOR FREE</a>
             </div>
           </div>
