@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/about", to: 'homes#index'
   get "/contact", to: 'homes#index'
   get "/advisors", to: 'homes#index'
+  get "/articles", to: 'homes#index'
   get "/month/:id/edit", to: 'homes#index'
   get "/months/:id", to: 'homes#index'
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
       resources :months, only: [:index, :show, :create, :update, :destroy] do
         resources :lineitems, only: [:index, :show, :create, :destroy]
       end
+      resources :articles, only: [:index]
     end
   end
 end
