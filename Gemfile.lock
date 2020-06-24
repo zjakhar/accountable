@@ -96,7 +96,7 @@ GEM
       railties (>= 3.2, < 6.1)
     dry-inflector (0.2.0)
     erubi (1.9.0)
-    excon (0.72.0)
+    excon (0.75.0)
     execjs (2.7.0)
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
@@ -252,7 +252,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (3.2.3)
+    fog-vsphere (3.3.1)
       fog-core
       rbvmomi (>= 1.9, < 3)
     fog-xenserver (1.0.0)
@@ -320,7 +320,7 @@ GEM
     method_source (0.9.2)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
+    mime-types-data (3.2020.0512)
     mimemagic (0.3.4)
     mini_magick (4.10.1)
     mini_mime (1.0.2)
@@ -330,9 +330,9 @@ GEM
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.2)
-    nokogiri (1.10.7)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    optimist (3.0.0)
+    optimist (3.0.1)
     orm_adapter (0.5.0)
     os (1.0.1)
     ovirt-engine-sdk (4.3.0)
@@ -345,7 +345,7 @@ GEM
       pry (>= 0.10.4)
     public_suffix (4.0.3)
     puma (3.12.2)
-    rack (2.2.1)
+    rack (2.2.3)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -381,7 +381,7 @@ GEM
     rbovirt (0.1.7)
       nokogiri
       rest-client (> 1.7.0)
-    rbvmomi (2.3.0)
+    rbvmomi (2.4.1)
       builder (~> 3.0)
       json (>= 1.8)
       nokogiri (~> 1.5)
